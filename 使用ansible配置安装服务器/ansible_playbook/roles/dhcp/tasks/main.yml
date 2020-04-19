@@ -1,0 +1,13 @@
+---
+- name: Install isc-dhcp-server
+  apt: 
+    name: isc-dhcp-server
+    state: latest
+
+- name: Copy dhcpd.conf
+  template: src=dhcpd.conf dest=/etc/dhcp/dhcpd.conf backup=yes
+
+- name: Copy isc-dhcp-server
+  template: src=isc-dhcp-server dest=/etc/default/isc-dhcp-server backup=yes
+  notify: 
+    - dhcp restart

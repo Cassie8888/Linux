@@ -1,0 +1,10 @@
+1337 times      StatusCode: 404       URL:/pub/winvn/readme.txt
+1185 times      StatusCode: 404       URL:/pub/winvn/release.txt
+683 times      StatusCode: 404       URL:/shuttle/missions/STS-69/mission-STS-69.html
+319 times      StatusCode: 404       URL:/images/nasa-logo.gif
+253 times      StatusCode: 404       URL:/shuttle/missions/sts-68/ksc-upclose.gif
+209 times      StatusCode: 404       URL:/elv/DELTA/uncons.htm
+200 times      StatusCode: 404       URL:/history/apollo/sa-1/sa-1-patch-small.gif
+166 times      StatusCode: 404       URL:/://spacelink.msfc.nasa.gov
+160 times      StatusCode: 404       URL:/images/crawlerway-logo.gif
+154 times      StatusCode: 404       URL:/history/apollo/a-001/a-001-patch-small.gif

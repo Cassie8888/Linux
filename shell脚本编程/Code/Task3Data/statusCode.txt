@@ -1,0 +1,7 @@
+StatusCode:  200  Num:  1398987  Rate:  89.1139%
+StatusCode:  302  Num:  26497    Rate:  1.68783%
+StatusCode:  304  Num:  134146   Rate:  8.54495%
+StatusCode:  403  Num:  171      Rate:  0.0108925%
+StatusCode:  404  Num:  10055    Rate:  0.640492%
+StatusCode:  500  Num:  3        Rate:  0.000191097%
+StatusCode:  501  Num:  27       Rate:  0.00171987%

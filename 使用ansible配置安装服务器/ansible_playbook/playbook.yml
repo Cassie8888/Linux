@@ -1,0 +1,9 @@
+---
+- hosts: target
+  become: true
+  roles:
+    - vsftpd
+    - nfs
+    - samba
+    - dhcp
+    - dns

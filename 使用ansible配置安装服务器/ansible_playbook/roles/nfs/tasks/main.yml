@@ -1,0 +1,29 @@
+---
+- name: Install nfs for server
+  apt: 
+    name: nfs-kernel-server
+    state: latest
+    install_recommends: false
+
+- name: Create shared directory which is only read
+  file:
+    path: "{{ nfs_general_srv }}"
+    owner: "nobody"
+    group: "nogroup"
+    state: directory
+    # 只读
+    mode: 0440  
+
+- name: Create shared directory which can be read and writted
+  file:
+    path: "{{ nfs_general_srv }}"
+    owner: "nobody"
+    group: "nogroup"
+    state: directory
+    # 读写
+    mode: 0660     
+    
+- name: Copy config 
+  template: src=exports dest=/etc/exports backup=yes
+  notify:
+    - nfs-kernel-server restart

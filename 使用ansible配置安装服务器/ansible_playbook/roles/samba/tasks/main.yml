@@ -1,0 +1,43 @@
+---
+- name: Install samba 
+  apt:
+    name: samba
+    state: latest
+
+- name: Add group for samba
+  group:
+    name: "{{ SMB_GROUP }}"
+    state: present
+
+- name: Add user for samba
+  user:
+    name: "{{ SMB_USER }}"
+    shell: /sbin/nologin
+    createhome: no
+    password: "{{ SMB_PASS_HASH }}"
+    group: "{{ SMB_GROUP }}"
+
+- name: Linux user with same name
+  shell: "(echo {{ SMB_PASS }}; echo {{ SMB_PASS }}) | smbpasswd -a {{ SMB_USER }}"
+
+- name: Enable the samba account
+  command: smbpasswd -e "{{ SMB_USER }}"
+
+- name: Mkdir for guest
+  file: 
+    path: "{{ SHR_GUEST }}"
+    group: "{{ SMB_GROUP }}"
+    mode: 2775
+    state: directory
+
+- name: Mkdir for user
+  file:
+    path: "{{ SHR_DEMO }}"
+    group: "{{ SMB_GROUP }}"
+    mode: 2770
+    state: directory
+
+- name: Copy smb.conf
+  template: src=smb.conf dest=/etc/samba/smb.conf
+  notify: 
+    - samba restart

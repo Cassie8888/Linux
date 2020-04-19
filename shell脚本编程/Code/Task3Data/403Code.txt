@@ -1,0 +1,10 @@
+32 times      StatusCode: 403      URL:/software/winvn/winvn.html/wvsmall.gif
+32 times      StatusCode: 403      URL:/software/winvn/winvn.html/winvn.gif
+32 times      StatusCode: 403      URL:/software/winvn/winvn.html/bluemarb.gif
+12 times      StatusCode: 403      URL:/ksc.html/images/ksclogo-medium.gif
+10 times      StatusCode: 403      URL:/ksc.html/images/WORLD-logosmall.gif
+10 times      StatusCode: 403      URL:/ksc.html/images/USA-logosmall.gif
+10 times      StatusCode: 403      URL:/ksc.html/images/NASA-logosmall.gif
+10 times      StatusCode: 403      URL:/ksc.html/images/MOSAIC-logosmall.gif
+5 times      StatusCode: 403      URL:/ksc.html/facts/about_ksc.html
+4 times      StatusCode: 403      URL:/ksc.html/shuttle/missions/missions.html
